@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import { BookOpen, Code, Info, MessageCircle, PieChart } from 'react-feather'
 import styled from 'styled-components'
-import { ReactComponent as MenuIcon } from '../../assets/images/menu.svg'
+// import { ReactComponent as MenuIcon } from '../../assets/images/menu.svg'
 import { useActiveWeb3React } from '../../hooks'
 import { useOnClickOutside } from '../../hooks/useOnClickOutside'
 import { ApplicationModal } from '../../state/application/actions'
@@ -10,36 +10,36 @@ import { useModalOpen, useToggleModal } from '../../state/application/hooks'
 import { ExternalLink } from '../../theme'
 import { ButtonPrimary } from '../Button'
 
-const StyledMenuIcon = styled(MenuIcon)`
-  path {
-    stroke: ${({ theme }) => theme.text1};
-  }
-`
+// const StyledMenuIcon = styled(MenuIcon)`
+//   path {
+//     stroke: ${({ theme }) => theme.text1};
+//   }
+// `
 
-const StyledMenuButton = styled.button`
-  width: 100%;
-  height: 100%;
-  border: none;
-  background-color: transparent;
-  margin: 0;
-  padding: 0;
-  height: 35px;
-  background-color: ${({ theme }) => theme.bg3};
-
-  padding: 0.15rem 0.5rem;
-  border-radius: 0.5rem;
-
-  :hover,
-  :focus {
-    cursor: pointer;
-    outline: none;
-    background-color: ${({ theme }) => theme.bg4};
-  }
-
-  svg {
-    margin-top: 2px;
-  }
-`
+// const StyledMenuButton = styled.button`
+//   width: 100%;
+//   height: 100%;
+//   border: none;
+//   background-color: transparent;
+//   margin: 0;
+//   padding: 0;
+//   height: 35px;
+//   background-color: ${({ theme }) => theme.bg3};
+// 
+//   padding: 0.15rem 0.5rem;
+//   border-radius: 0.5rem;
+// 
+//   :hover,
+//   :focus {
+//     cursor: pointer;
+//     outline: none;
+//     background-color: ${({ theme }) => theme.bg4};
+//   }
+// 
+//   svg {
+//     margin-top: 2px;
+//   }
+// `
 
 const StyledMenu = styled.div`
   margin-left: 0.5rem;
@@ -99,9 +99,10 @@ export default function Menu() {
   return (
     // https://github.com/DefinitelyTyped/DefinitelyTyped/issues/30451
     <StyledMenu ref={node as any}>
+      {/*
       <StyledMenuButton onClick={toggle}>
         <StyledMenuIcon />
-      </StyledMenuButton>
+      </StyledMenuButton> */}
 
       {open && (
         <MenuFlyout>
